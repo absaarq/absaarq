@@ -10,7 +10,12 @@
 
   <!-- STEP 1: PROFILE SELECTION SCREEN -->
   <section id="profile-screen" class="screen active">
-    <h1>What you want to see?</h1>
+    <!-- Top Center Logo for Profile Screen -->
+    <div class="top-logo-container">
+      <img src="assets/netflix.jpg" alt="Netflix Logo" class="brand-logo">
+    </div>
+    
+    <h1>Who's watching?</h1>
     <div class="profile-container">
       <div class="profile-card" onclick="openGallery('Partner')">
         <img src="assets/her.jpeg" alt="Partner">
@@ -25,7 +30,7 @@
         <span>Happy Birthday</span>
       </div>
       <div class="profile-card" onclick="openGallery('Silly us')">
-        <img src="assets/silly.jpeg" alt="Fun">
+        <img src="assets/bday.jpg" alt="Fun">
         <span>Silly Moments</span>
       </div>
       <div class="profile-card" onclick="openGallery('Our')">
@@ -38,8 +43,14 @@
   <!-- STEP 2: DASHBOARD / GALLERY SCREEN -->
   <section id="gallery-screen" class="screen">
     <nav class="navbar">
-      <h2 class="logo">MEMOR</h2>
-      <button class="switch-btn" onclick="showProfiles()">Switch Profile</button>
+      <div class="nav-left"></div>
+      <div class="nav-center">
+        <!-- Fixed image path to assets/heart.jpeg -->
+        <img src="assets/netflix.jpg" alt="Heart Logo" class="brand-logo">
+      </div>
+      <div class="nav-right">
+        <button class="switch-btn" onclick="showProfiles()">Switch Profile</button>
+      </div>
     </nav>
 
     <div class="hero-banner">
@@ -49,10 +60,10 @@
 
     <div class="content-row">
       <h3>You 🥺💘</h3>
-      <!-- Dynamic container target for script.js -->
+      <!-- Restored media container for script.js -->
       <div class="card-row" id="media-container"></div>
     </div>
-  </section>
+  </section> <!-- Properly closed gallery screen -->
 
   <!-- STEP 3: VIDEO MODAL OVERLAY -->
   <div id="video-modal" class="modal">

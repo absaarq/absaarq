@@ -210,3 +210,39 @@ video {
   background-color: #000;
 }
 
+/* Top Logo Styling */
+.top-logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 10px 0;
+}
+
+.brand-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Updated Navbar for Center Logo Alignment */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+}
+
+.nav-left, .nav-right {
+  flex: 1;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
