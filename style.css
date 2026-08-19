@@ -246,3 +246,34 @@ video {
   display: flex;
   justify-content: center;
 }
+
+/* --- MOBILE RESPONSIVE FIX --- */
+
+/* This code applies ONLY to screens smaller than 600px (like most phones) */
+@media only screen and (max-width: 600px) {
+  
+  /* Scale down the 'Who's watching?' title */
+  #profile-screen h1 {
+    font-size: 2rem !important; /* Makes the title smaller on mobile */
+    margin-bottom: 20px !important;
+  }
+
+  /* Make the profiles smaller and fit two per row on mobile */
+  .profile-container {
+    gap: 15px !important; /* Reduces space between profiles */
+    padding: 0 10px !important; /* Adds slight padding to the sides */
+    justify-content: center !important;
+  }
+
+  /* Target the profile images themselves */
+  .profile-card img {
+    width: 100px !important; /* Forces the image width to 100px on mobile */
+    height: 100px !important; /* Forces the image height to 100px on mobile */
+  }
+
+  /* Scale down the profile name text */
+  .profile-card span {
+    font-size: 1rem !important;
+    margin-top: 8px !important;
+  }
+}
