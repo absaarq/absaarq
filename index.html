@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netmirror - Special Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- STEP 1: PROFILE SELECTION SCREEN -->
+  <section id="profile-screen" class="screen active">
+    <h1>What you want to see?</h1>
+    <div class="profile-container">
+      <div class="profile-card" onclick="openGallery('Partner')">
+        <img src="assets/her.jpeg" alt="Partner">
+        <span>My Love</span>
+      </div>
+      <div class="profile-card" onclick="openGallery('Yy toh humari')">
+        <img src="assets/us.jpeg" alt="Us">
+        <span>Us Together</span>
+      </div>
+      <div class="profile-card" onclick="openGallery('Bdayyy')">
+        <img src="assets/h.JPG" alt="Trips">
+        <span>Happy Birthday</span>
+      </div>
+      <div class="profile-card" onclick="openGallery('Silly us')">
+        <img src="assets/silly.jpeg" alt="Fun">
+        <span>Silly Moments</span>
+      </div>
+      <div class="profile-card" onclick="openGallery('Our')">
+        <img src="assets/heart.jpeg" alt="Favorites">
+        <span>Favorites</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2: DASHBOARD / GALLERY SCREEN -->
+  <section id="gallery-screen" class="screen">
+    <nav class="navbar">
+      <h2 class="logo">MEMOR</h2>
+      <button class="switch-btn" onclick="showProfiles()">Switch Profile</button>
+    </nav>
+
+    <div class="hero-banner">
+      <h1 id="gallery-title">Selected Profile</h1>
+      <p>Click on any title thumbnail to play the memory clip.</p>
+    </div>
+
+    <div class="content-row">
+      <h3>You 🥺💘</h3>
+      <!-- Dynamic container target for script.js -->
+      <div class="card-row" id="media-container"></div>
+    </div>
+  </section>
+
+  <!-- STEP 3: VIDEO MODAL OVERLAY -->
+  <div id="video-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeVideo()">&times;</span>
+      <h2 id="modal-title">Memory Title</h2>
+      <video id="main-player" controls autoplay>
+        <source id="video-source" src="" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
